@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoradoMotion Studio — Gwyn Dorado MV Sequence Planner & Code-SVG/WebGL Engine</title>
+  <link rel="stylesheet" href="css/studio.css" />
+</head>
+<body>
+  <div id="dorado-studio-root"></div>
+
+  <!-- Parallel Subagent Modules (Loaded in deterministic dependency order) -->
+  <script src="js/01_creative_director.js"></script>
+  <script src="js/02_audio_engine.js"></script>
+  <script src="js/03_svg_motion_engine.js"></script>
+  <script src="js/04_webgl_oklab_compositor.js"></script>
+  <script src="js/05_storytold_bridge.js"></script>
+  <script src="js/06_ui_shell.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.DoradoStudio && window.DoradoStudio.UI && typeof window.DoradoStudio.UI.mount === 'function') {
+        window.DoradoStudio.UI.mount(document.getElementById('dorado-studio-root'));
+      }
+    });
+  </script>
+</body>
+</html>
